@@ -165,6 +165,8 @@ source ~/apps/tprf/share/triqs_tprf/triqs_tprfvars.sh
 
 # w2dynamics_interface
 
+https://github.com/TRIQS/w2dynamics_interface
+
 ## CMake flags
 
 ```bash
