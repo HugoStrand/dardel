@@ -81,6 +81,8 @@ Contents of `~/dev/triqs/jobscript`
 OMP_NUM_THREADS=1 ctest -j 64
 ```
 
+Submit job and monitor progress
+
 ```bash
 sbatch ../jobscript
 tail -f std*
@@ -147,6 +149,8 @@ Contents of `~/dev/tprf/jobscript`
 OMP_NUM_THREADS=1 ctest -j 64
 ```
 
+Submit job and monitor progress
+
 ```bash
 sbatch ../jobscript
 tail -f std*
@@ -156,5 +160,21 @@ tail -f std*
 
 ```
 make -j 64 install
-source ~/apps/triqs/share/triqs/triqsvars.sh
+source ~/apps/tprf/share/triqs_tprf/triqs_tprfvars.sh
+```
+
+# w2dynamics_interface
+
+## CMake flags
+
+```bash
+CXX=g++-12 CC=gcc-12 FC=ftn cmake \
+  -DCMAKE_INSTALL_PREFIX=$HOME/apps/w2dynamics_interface \
+  -DCMAKE_BUILD_TYPE=Release \
+  -DCMAKE_CXX_FLAGS="-Ofast -funroll-loops" \
+  ..
+```
+
+```
+source ~/apps/w2dynamics_interface/share/w2dynamics_interface/w2dynamics_interfacevars.sh
 ```
